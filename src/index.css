@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typing Animation Keyframes */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from, to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: white;
+  }
+}
+
+@keyframes fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation Classes */
+.typewriter-animation {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 0;
+  border-right: 0.15em solid white;
+  animation: typewriter 3s steps(40, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+.fade-in-up-animation {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fade-in-up 1s ease-out forwards;
+}
