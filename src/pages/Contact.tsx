@@ -49,7 +49,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Email</h3>
-                  <p className="text-gray-300">khamidkhanov7@example.com</p>
+                  <p className="text-gray-300">khamidkhanovv7@gmail.com</p>
                 </div>
               </div>
 
@@ -59,7 +59,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Phone</h3>
-                  <p className="text-gray-300">+1 (555) 123-4567</p>
+                  <p className="text-gray-300">+998 (99) 055 - 64 - 05</p>
                 </div>
               </div>
 
@@ -69,7 +69,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="text-white font-semibold">Location</h3>
-                  <p className="text-gray-300">Available worldwide</p>
+                  <p className="text-gray-300">Uzbekistan, Namangan </p>
                 </div>
               </div>
             </div>
@@ -79,33 +79,44 @@ const Contact = () => {
               <h3 className="text-white font-semibold mb-4">Follow Me</h3>
               <div className="flex space-x-4">
                 <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-colors duration-200"
-                  title="GitHub"
-                >
-                  <Github className="text-white" size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors duration-200"
-                  title="LeetCode"
-                >
-                  <Code className="text-white" size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors duration-200"
-                  title="Telegram"
-                >
-                  <MessageCircle className="text-white" size={20} />
-                </a>
-                <a
-                  href="#"
-                  className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-pink-600 transition-colors duration-200"
-                  title="Instagram"
-                >
-                  <Instagram className="text-white" size={20} />
-                </a>
+  href="https://github.com/khamidkhanov-7"
+  className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-purple-600 transition-colors duration-200"
+  title="GitHub"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Github className="text-white" size={20} />
+</a>
+
+<a
+  href="https://leetcode.com/u/khamidkhanov7/"
+  className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-orange-600 transition-colors duration-200"
+  title="LeetCode"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Code className="text-white" size={20} />
+</a>
+
+<a
+  href="https://t.me/Khamidkhanov7"
+  className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-blue-500 transition-colors duration-200"
+  title="Telegram"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <MessageCircle className="text-white" size={20} />
+</a>
+
+<a
+  href="https://www.instagram.com/khamidkhanov.7/"
+  className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-pink-600 transition-colors duration-200"
+  title="Instagram"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Instagram className="text-white" size={20} />
+</a>
               </div>
             </div>
 

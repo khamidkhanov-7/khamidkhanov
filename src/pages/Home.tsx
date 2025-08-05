@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, Github, MessageCircle, Instagram, Code } from 'lucide-react';
 
@@ -22,7 +22,8 @@ const Home = () => {
             <div className="mb-8">
               <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-to-r from-purple-400 to-blue-400 p-1">
                 <div className="w-full h-full rounded-full bg-gray-900 flex items-center justify-center">
-                  <span className="text-4xl font-bold text-white">K7</span>
+                <span className="text-4xl font-bold text-white">K7</span>
+
                 </div>
               </div>
             </div>
@@ -85,18 +86,45 @@ const Home = () => {
                 animationDelay: '5s'
               }}
             >
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-200">
-                <Github size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-200" title="LeetCode">
-                <Code size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-200" title="Telegram">
-                <MessageCircle size={24} />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-purple-400 transition-colors duration-200" title="Instagram">
-                <Instagram size={24} />
-              </a>
+<a
+  href="https://github.com/khamidkhanov-7"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+  title="GitHub"
+>
+  <Github size={24} />
+</a>
+             <a
+  href="https://leetcode.com/u/khamidkhanov7/"
+  className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+  title="LeetCode"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Code size={24} />
+</a>
+
+<a
+  href="https://t.me/Khamidkhanov7"
+  className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+  title="Telegram"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <MessageCircle size={24} />
+</a>
+
+<a
+  href="https://www.instagram.com/khamidkhanov.7/"
+  className="text-gray-400 hover:text-purple-400 transition-colors duration-200"
+  title="Instagram"
+  target="_blank"
+  rel="noopener noreferrer"
+>
+  <Instagram size={24} />
+</a>
+
             </div>
           </div>
         </div>
