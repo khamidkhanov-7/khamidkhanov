@@ -33,20 +33,21 @@ const About = () => {
           <div>
             <h2 className="text-3xl font-bold text-white mb-6">My Story</h2>
             <div className="space-y-4 text-gray-300">
-              <p>
-                Hello! I'm Khamidkhanov7, a dedicated full-stack developer with a passion for creating 
-                innovative digital solutions. My journey in programming began over 3 years ago, and 
-                since then, I've been constantly learning and evolving with the ever-changing tech landscape.
-              </p>
-              <p>
-                I specialize in building modern web applications using cutting-edge technologies like 
-                React, TypeScript, and Node.js. My approach combines technical expertise with creative 
-                problem-solving to deliver exceptional user experiences.
-              </p>
-              <p>
-                When I'm not coding, you can find me exploring new technologies, contributing to open-source 
-                projects, or sharing my knowledge through blog posts and mentoring fellow developers.
-              </p>
+<p>
+  Hello! I'm <strong>Khamidkhanov7</strong>, a dedicated full-stack developer with a strong passion for building 
+  innovative digital solutions. My programming journey began over three years ago, and since then, I’ve been continuously 
+  growing and adapting to the ever-evolving tech landscape.
+</p>
+<p>
+  I specialize in developing modern web applications using cutting-edge technologies like 
+  <strong> React</strong>, <strong>TypeScript</strong>, and <strong>Node.js</strong>. I combine technical expertise 
+  with creative problem-solving to deliver seamless and engaging user experiences.
+</p>
+<p>
+  When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, 
+  and sharing knowledge through blog posts and mentoring fellow developers.
+</p>
+
             </div>
           </div>
 

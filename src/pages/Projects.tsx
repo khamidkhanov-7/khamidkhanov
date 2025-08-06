@@ -12,8 +12,8 @@ const Projects = () => {
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe'],
       category: 'Full Stack',
-      github: '#',
-      live: '#'
+      github: 'https://github.com/khamidkhanov-7/E-Commerce-Platform.git',
+      live: 'https://e-commerce-platform-seven-sooty.vercel.app/'
     },
     {
       id: 2,
@@ -55,16 +55,38 @@ const Projects = () => {
       github: '#',
       live: '#'
     },
-    {
-      id: 6,
-      title: 'Mobile Banking App',
-      description: 'A secure mobile banking application with biometric authentication, transaction history, and real-time notifications.',
-      image: 'https://images.pexels.com/photos/3943720/pexels-photo-3943720.jpeg?auto=compress&cs=tinysrgb&w=800',
-      technologies: ['React Native', 'TypeScript', 'Node.js', 'PostgreSQL'],
-      category: 'Mobile',
-      github: '#',
-      live: '#'
-    }
+{
+  id: 6,
+  title: 'Mobile Banking App',
+  description: 'A secure mobile banking application with biometric authentication, transaction history, and real-time notifications.',
+  image: 'https://images.pexels.com/photos/3943720/pexels-photo-3943720.jpeg?auto=compress&cs=tinysrgb&w=800',
+  technologies: ['React Native', 'TypeScript', 'Node.js', 'PostgreSQL'],
+  category: 'Mobile',
+  github: '#',
+  live: '#'
+},
+{
+  id: 7,
+  title: 'Smart Calculator',
+  description: 'A modern calculator with currency conversion, history, dark/light mode, and language switching.',
+  image: 'https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800',
+  technologies: ['HTML', 'CSS', 'JavaScript'],
+  category: 'Web App',
+  github: 'https://github.com/khamidkhanov-7/Calculator',
+  live: 'https://calculator-three-sigma-41thj1djf4.vercel.app/'
+}
+,
+{
+  id: 8,
+  title: 'Tetris Game',
+  description: 'A classic Tetris game built with HTML, CSS, and JavaScript. Enjoy the nostalgic gameplay with smooth animations and score tracking.',
+  image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJ-DYm1zOVwuzymaR1mpB1PUwU644pxX686A&s',
+  technologies: ['HTML', 'CSS', 'JavaScript'],
+  category: 'Game',
+  github: 'https://github.com/khamidkhanov-7/Tetris-game',
+  live: 'https://calculator-fhv9.vercel.app//'  // Agar GitHub Pages’ga qo‘ygan bo‘lsangiz
+}
+
   ];
 
   const categories = ['All', 'Full Stack', 'Frontend', 'Backend', 'Mobile'];
