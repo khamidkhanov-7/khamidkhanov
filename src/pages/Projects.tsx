@@ -84,7 +84,7 @@ const Projects = () => {
   technologies: ['HTML', 'CSS', 'JavaScript'],
   category: 'Game',
   github: 'https://github.com/khamidkhanov-7/Tetris-game',
-  live: 'https://calculator-fhv9.vercel.app//'  // Agar GitHub Pages’ga qo‘ygan bo‘lsangiz
+  live: 'https://calculator-fhv9.vercel.app//'  
 }
 
   ];
