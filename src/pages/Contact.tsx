@@ -1,0 +1,258 @@
+import React, { useState, useEffect } from 'react';
+import { Mail, Phone, MapPin, Send, Github, MessageCircle, Instagram, Code } from 'lucide-react';
+
+const Contact = () => {
+  const [isVisible, setIsVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(true);
+    }, 200);
+    return () => clearTimeout(timer);
+  }, []);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission here
+    console.log('Form submitted:', formData);
+    // Reset form
+    setFormData({ name: '', email: '', subject: '', message: '' });
+  };
+
+  return (
+    <div className="min-h-screen bg-gray-900 pt-20">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        {/* Header */}
+        <div className={`text-center mb-16 ${isVisible ? 'fade-in-up-animation' : ''}`}>
+          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
+            Get In <span className="bg-gradient-to-r from-purple-400 to-blue-400 bg-clip-text text-transparent gradient-shift-animation">Touch</span>
+          </h1>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Let's discuss your project and bring your ideas to life. I'm always excited to work on new challenges.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Contact Information */}
+          <div className={`${isVisible ? 'slide-in-left-animation' : ''}`} style={{ animationDelay: '0.3s' }}>
+            <h2 className="text-3xl font-bold text-white mb-8">Let's Connect</h2>
+            
+            <div className="space-y-6 mb-8">
+              <div className="flex items-center space-x-4 hover-lift">
+                <div className="w-12 h-12 bg-purple-600 rounded-lg flex items-center justify-center hover-glow pulse-glow-animation">
+                  <Mail className="text-white" size={24} />
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold">Email</h3>
+                  <p className="text-gray-300">khamidkhanovv7@gmail.com</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 hover-lift">
+                <div className="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center hover-glow">
+                  <Phone className="text-white" size={24} />
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold">Phone</h3>
+                  <p className="text-gray-300">+998 (99) 055-0564</p>
+                </div>
+              </div>
+
+              <div className="flex items-center space-x-4 hover-lift">
+                <div className="w-12 h-12 bg-emerald-600 rounded-lg flex items-center justify-center hover-glow">
+                  <MapPin className="text-white" size={24} />
+                </div>
+                <div>
+                  <h3 className="text-white font-semibold">Location</h3>
+                  <p className="text-gray-300">Uzbekistan,Namangan</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Social Links */}
+            <div>
+              <h3 className="text-white font-semibold mb-4">Follow Me</h3>
+              <div className="flex space-x-4">
+                <a
+                  href="https://github.com/khamidkhanov-7"
+                  className="w-12 h-12 bg-gray-800/80 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-purple-600 transition-all duration-300 hover-lift hover-glow border border-gray-700/50 hover:border-purple-500/50"
+                  title="GitHub"
+                >
+                  <Github className="text-white" size={20} />
+                </a>
+                <a
+                  href="https://leetcode.com/u/khamidkhanov7/"
+                  className="w-12 h-12 bg-gray-800/80 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-orange-600 transition-all duration-300 hover-lift hover-glow border border-gray-700/50 hover:border-orange-500/50"
+                  title="LeetCode"
+                >
+                  <Code className="text-white" size={20} />
+                </a>
+                <a
+                  href="https://t.me/Khamidkhanov7"
+                  className="w-12 h-12 bg-gray-800/80 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-blue-500 transition-all duration-300 hover-lift hover-glow border border-gray-700/50 hover:border-blue-500/50"
+                  title="Telegram"
+                >
+                  <MessageCircle className="text-white" size={20} />
+                </a>
+                <a
+                  href="https://instagram.com/khamidkhanov.7"
+                  className="w-12 h-12 bg-gray-800/80 backdrop-blur-sm rounded-lg flex items-center justify-center hover:bg-pink-600 transition-all duration-300 hover-lift hover-glow border border-gray-700/50 hover:border-pink-500/50"
+                  title="Instagram"
+                >
+                  <Instagram className="text-white" size={20} />
+                </a>
+              </div>
+            </div>
+
+            {/* Availability */}
+            <div className="mt-8 p-6 bg-gradient-to-r from-purple-600/20 to-blue-600/20 rounded-xl border border-purple-500/30 hover-lift backdrop-blur-sm">
+              <h3 className="text-white font-semibold mb-2">Current Availability</h3>
+              <p className="text-gray-300 text-sm">
+                I'm currently available for new projects and collaborations. 
+                Typical response time is within 24 hours.
+              </p>
+              <div className="flex items-center mt-3">
+                <div className="w-3 h-3 bg-green-400 rounded-full mr-2 pulse-glow-animation"></div>
+                <span className="text-green-400 text-sm font-medium">Available for hire</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className={`bg-gray-800/80 backdrop-blur-sm rounded-2xl p-8 border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300 ${isVisible ? 'slide-in-right-animation' : ''}`} style={{ animationDelay: '0.5s' }}>
+            <h2 className="text-2xl font-bold text-white mb-6">Send Me a Message</h2>
+            
+            <form onSubmit={handleSubmit} className="space-y-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div>
+                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
+                    Your Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 hover:border-gray-500"
+                    placeholder="John Doe"
+                  />
+                </div>
+
+                <div>
+                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
+                    Email Address
+                  </label>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                    className="w-full px-4 py-3 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 hover:border-gray-500"
+                    placeholder="john@example.com"
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label htmlFor="subject" className="block text-sm font-medium text-gray-300 mb-2">
+                  Subject
+                </label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 hover:border-gray-500"
+                  placeholder="Project Discussion"
+                />
+              </div>
+
+              <div>
+                <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
+                  Message
+                </label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  required
+                  rows={6}
+                  className="w-full px-4 py-3 bg-gray-700/80 backdrop-blur-sm border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 resize-none hover:border-gray-500"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+              </div>
+
+              <button
+                type="submit"
+                className="w-full bg-gradient-to-r from-purple-600 to-blue-600 text-white font-semibold py-3 px-6 rounded-lg hover:from-purple-700 hover:to-blue-700 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:ring-offset-gray-800 transition-all duration-300 flex items-center justify-center hover-lift hover-glow transform hover:scale-105"
+              >
+                <Send className="mr-2" size={20} />
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+
+        {/* FAQ Section */}
+        <div className="mt-20">
+          <h2 className={`text-3xl font-bold text-white mb-8 text-center ${isVisible ? 'scale-in-animation' : ''}`} style={{ animationDelay: '0.8s' }}>Frequently Asked Questions</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className={`bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 hover-lift border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300 ${isVisible ? 'slide-in-left-animation' : ''}`} style={{ animationDelay: '1s' }}>
+              <h3 className="text-xl font-semibold text-white mb-3">What's your typical project timeline?</h3>
+              <p className="text-gray-300">
+                Project timelines vary based on scope and complexity. Simple websites typically take 2-4 weeks, 
+                while complex applications can take 2-6 months. I'll provide a detailed timeline during our initial consultation.
+              </p>
+            </div>
+
+            <div className={`bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 hover-lift border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300 ${isVisible ? 'slide-in-right-animation' : ''}`} style={{ animationDelay: '1.1s' }}>
+              <h3 className="text-xl font-semibold text-white mb-3">Do you offer ongoing support?</h3>
+              <p className="text-gray-300">
+                Yes! I provide ongoing maintenance and support packages to ensure your project stays up-to-date 
+                and performs optimally. This includes bug fixes, updates, and feature enhancements.
+              </p>
+            </div>
+
+            <div className={`bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 hover-lift border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300 ${isVisible ? 'slide-in-left-animation' : ''}`} style={{ animationDelay: '1.2s' }}>
+              <h3 className="text-xl font-semibold text-white mb-3">What's your development process?</h3>
+              <p className="text-gray-300">
+                I follow an agile development approach with regular check-ins, transparent communication, 
+                and iterative delivery. You'll be involved throughout the process to ensure the final product meets your vision.
+              </p>
+            </div>
+
+            <div className={`bg-gray-800/80 backdrop-blur-sm rounded-xl p-6 hover-lift border border-gray-700/50 hover:border-purple-500/30 transition-all duration-300 ${isVisible ? 'slide-in-right-animation' : ''}`} style={{ animationDelay: '1.3s' }}>
+              <h3 className="text-xl font-semibold text-white mb-3">Can you work with my existing team?</h3>
+              <p className="text-gray-300">
+                Absolutely! I'm comfortable working with existing teams and can adapt to your current 
+                workflows, tools, and methodologies. Collaboration and communication are key to successful projects.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Contact;
